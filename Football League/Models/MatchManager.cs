@@ -79,7 +79,7 @@ namespace Football_League.Models
 
                     total_played = pm_list1.Count() + pm_list2.Count();
 
-                    List<PlayedMatch> win_list = allMatches.FindAll(pm => pm.winner == t.Name && pm.matchResult == "win");
+                    List<PlayedMatch> win_list = allMatches.FindAll(pm => pm.winner == t.Name);
 
                     int wins = win_list.Count();
 
@@ -101,11 +101,11 @@ namespace Football_League.Models
                         draws = draws,
                         total_points = total_points
                     });
-
+                    standings.Sort((x,y)=>x.total_points.CompareTo(y.total_points));   
                     //new Standings() -- add to list
                 }
 
-                return standings.ToList();
+                return standings.OrderByDescending(o=>o.total_points).ToList();
             }
             catch
             {
