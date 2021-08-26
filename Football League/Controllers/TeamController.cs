@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net.Http;
 using Microsoft.AspNetCore.Http;
 using Football_League.Interfaces;
+using Football_League.Models;
 
 namespace Football_League.Controllers
 {
@@ -15,7 +13,8 @@ namespace Football_League.Controllers
     {
         public readonly ITeamManager teamManager;
 
-        public TeamController(ITeamManager _teamManager) {
+        public TeamController(ITeamManager _teamManager) 
+        {
             teamManager = _teamManager;
         }
 
@@ -27,6 +26,23 @@ namespace Football_League.Controllers
             {
                 var result = teamManager.getTeam(id);
                 return Ok(result);
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                    "Error retrieving data from the database");
+            }
+        }
+
+        [HttpGet]
+        [Route("api/[controller]/getAllTeams")]
+        public ActionResult<Team> getAllTeams()
+        {
+            try
+            {
+                List<Team> teams = new List<Team>();
+                teams = teamManager.getAllTeams();
+                return Ok(teams);
             }
             catch (Exception)
             {
