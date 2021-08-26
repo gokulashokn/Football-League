@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="de5af299-7f8f-475c-9895-a960e1d86505" ChangeDateTime="08/24/2021 14:49:28">
+    <Property Name="ElementName" Value="[dbo].[fbl_team].[ManagerName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[fbl_team]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Manager" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="49741bdd-00ea-4e86-89e0-77359ffca708" ChangeDateTime="08/26/2021 02:10:41">
+    <Property Name="ElementName" Value="[dbo].[fbl_playedmatch].[home]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[fbl_playedmatch]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Home" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a95ab27c-165e-42f6-bc46-5b3f87e133bd" ChangeDateTime="08/26/2021 02:10:49">
+    <Property Name="ElementName" Value="[dbo].[fbl_playedmatch].[away]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[fbl_playedmatch]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Away" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="948f28f1-905c-4f71-b8dc-7ae180e9b35d" ChangeDateTime="08/26/2021 02:11:12">
+    <Property Name="ElementName" Value="[dbo].[fbl_playedmatch].[Home]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[fbl_playedmatch]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="home" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0daa1b72-7b21-4164-b8be-b2d5a74343f8" ChangeDateTime="08/26/2021 02:11:15">
+    <Property Name="ElementName" Value="[dbo].[fbl_playedmatch].[Away]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[fbl_playedmatch]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="away" />
+  </Operation>
+</Operations>

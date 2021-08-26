@@ -1,0 +1,51 @@
+﻿@model Football_League.Models.PlayedMatch
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>PlayedMatch</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sideA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sideA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.sideB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.sideB)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.matchResult)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.matchResult)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.winner)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.winner)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.matchId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</body>
+</html>
